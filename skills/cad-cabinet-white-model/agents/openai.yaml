@@ -1,0 +1,4 @@
+interface:
+  display_name: "CAD柜体白模与机位"
+  short_description: "按图参数化建柜体，批量预览机位，选定后输出高清白模"
+  default_prompt: "请用 $cad-cabinet-white-model 按我的CAD制作白模，先核对尺寸并给机位小样，选定后输出高清。"

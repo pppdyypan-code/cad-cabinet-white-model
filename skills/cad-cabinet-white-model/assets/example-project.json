@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "units": "mm",
+  "mode": "build",
+  "name": "synthetic-cabinet-room",
+  "room": {"width_mm": 3200, "depth_mm": 3600, "height_mm": 2700, "wall_mm": 100, "open_sides": ["front", "ceiling"]},
+  "decisions": [{"field": "source", "value": "synthetic demonstration", "basis": "estimated", "source": "example", "note": "Not a reconstruction of private CAD."}],
+  "components": [
+    {"id": "Wardrobe", "kind": "cabinet", "position_mm": [2400, 3500, 0], "rotation_deg": 180, "width_mm": 1800, "depth_mm": 560, "height_mm": 2360, "columns": [
+      {"width_mm": 600, "handle": {"style": "f", "side": "right", "length_mm": 1000}},
+      {"width_mm": 600, "handle": {"style": "bar", "side": "left", "length_mm": 1000}},
+      {"width_mm": 600, "handle": {"style": "none"}}
+    ]},
+    {"id": "Chest", "kind": "cabinet", "position_mm": [600, 3500, 0], "rotation_deg": 180, "width_mm": 550, "depth_mm": 500, "height_mm": 1000, "columns": [
+      {"width_mm": 550, "rows_mm": [250, 250, 250, 250], "handle": {"style": "bar", "orientation": "horizontal", "length_mm": 160}}
+    ]},
+    {"id": "Slats", "kind": "slats", "position_mm": [2800, 3480, 0], "rotation_deg": 180, "width_mm": 300, "depth_mm": 30, "height_mm": 2360, "count": 10, "bar_mm": 15},
+    {"id": "CeilingStrip", "kind": "box", "position_mm": [0, 2900, 2360], "width_mm": 3200, "depth_mm": 700, "height_mm": 180},
+    {"id": "VanityTop", "kind": "box", "position_mm": [2800, 1000, 770], "width_mm": 400, "depth_mm": 900, "height_mm": 30},
+    {"id": "Upper", "kind": "cabinet", "position_mm": [3200, 1000, 1500], "rotation_deg": 90, "width_mm": 900, "depth_mm": 260, "height_mm": 860, "columns": [
+      {"width_mm": 450, "handle": {"style": "knob"}},
+      {"width_mm": 450, "handle": {"style": "none"}, "miter_right": true}
+    ]}
+  ],
+  "cameras": [
+    {"id": "A", "label": "Wardrobe complete", "position_mm": [1600, 150, 1500], "target_mm": [1450, 3200, 1500], "lens_mm": 28, "shift_y": -0.08, "targets": ["Wardrobe", "Chest", "Slats"]},
+    {"id": "B", "label": "Wardrobe closer", "position_mm": [1600, 350, 1500], "target_mm": [1450, 3200, 1500], "lens_mm": 35, "shift_y": -0.08, "targets": ["Wardrobe", "Chest"]},
+    {"id": "C", "label": "Vanity 1200", "position_mm": [600, 1300, 1200], "target_mm": [3000, 1450, 1200], "lens_mm": 28, "aspect": [3, 4], "targets": ["VanityTop", "Upper"]},
+    {"id": "D", "label": "Entry overview", "position_mm": [650, 100, 1500], "target_mm": [2000, 2800, 1500], "lens_mm": 24, "shift_y": -0.08, "targets": ["Wardrobe", "Upper"]}
+  ]
+}
